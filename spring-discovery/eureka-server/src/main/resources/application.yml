@@ -1,0 +1,17 @@
+#  De forma predeterminada, el registro de eureka también intenta registrarse a sí mismo,
+#  por lo que se debe desactivar ese comportamiento. Además, es una buena convención
+#  colocar este registro en un puerto separado cuando se lo utiliza localmente.
+
+spring:
+  application:
+    name: eureka-server
+server:
+  port: 8761
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+logging:
+  level:
+    com.netflix.eureka: OFF
+    com.netflix.discovery: OFF
